@@ -1,0 +1,23 @@
+name: Python CI
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  verificar:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Instalar Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.12'
+
+      - name: Instalar dependencias
+        run: pip install -r requirements.txt
+
+      - name: Verificar sintaxis
+        run: python -m py_compile main.py
