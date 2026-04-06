@@ -64,3 +64,14 @@ def obtener_dolar():
     datos = response.json()
     blue = list(filter(lambda d: d["casa"] == "blue", datos))
     return blue[0]["venta"]  # 
+
+
+
+def eliminar_gasto(gastos, id_eliminar):
+    gasto_encontrado = list(filter(lambda g: g.id == id_eliminar, gastos))
+    
+    if not gasto_encontrado:
+        print("No se encontro un gasto con ese ID")
+    else:
+       gastos.remove(gasto_encontrado[0])
+       print("Gasto eliminado correctamente")

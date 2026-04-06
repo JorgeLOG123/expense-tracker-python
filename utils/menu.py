@@ -7,7 +7,8 @@ def mostrar_menu():
     print("3) Ver total gastado")
     print("4) Filtrar por categoria")
     print("5) Ordenar gastos por monto")
-    print("6) Salir")
+    print("6  Eliminar Gasto")
+    print("7) Salir")
    
 
     

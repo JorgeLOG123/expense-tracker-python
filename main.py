@@ -1,6 +1,6 @@
 from utils.menu import mostrar_menu
 from models.gasto import Gasto
-from services.gastos_services import listar_gastos, calcular_total, filtrar_por_categoria, ordenar_gastos, cargar_gastos, guardar_gastos, obtener_dolar
+from services.gastos_services import listar_gastos, calcular_total, filtrar_por_categoria, ordenar_gastos, cargar_gastos, guardar_gastos, obtener_dolar, eliminar_gasto
 import re
 gastos = cargar_gastos()
 siguiente_id =  max(gasto.id for gasto in gastos) + 1 if gastos else 1
@@ -47,7 +47,14 @@ while True:
     elif opcion == "5":
         ordenar_gastos(gastos)
     
+  
     elif opcion == "6":
+        id_eliminar = int(input("Ingrese el ID del gasto a eliminar: "))
+        eliminar_gasto(gastos, id_eliminar)
+        guardar_gastos(gastos)
+  
+  
+    elif opcion == "7":
         print("Saliendo del sistema, adios!:)")
         break
     else:
