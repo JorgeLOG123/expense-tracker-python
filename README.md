@@ -3,6 +3,7 @@
 ![Python](https://img.shields.io/badge/Python-3.12-blue?logo=python)
 ![Status](https://img.shields.io/badge/Estado-En%20desarrollo-yellow)
 ![License](https://img.shields.io/badge/Licencia-MIT-green)
+![Python CI](https://github.com/JorgeLOG123/calculadora_de_gastos/actions/workflows/python-app.yml/badge.svg)  ← acá
 
 Aplicación de consola para registrar y gestionar gastos personales en pesos argentinos con conversión automática a dólares blue en tiempo real.
 
